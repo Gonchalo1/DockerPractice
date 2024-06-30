@@ -1,0 +1,19 @@
+Lian web:
+4 Secciones:
+ 1.Inicio.
+ 2.Plan1.
+ 3.Plan2.
+ 4.Contacto.
+
+Diseño:
+esperando a que el cliente responda.
+
+ 1.Inicio:
+   Va a tener los 2 planes para elegír y en un botón chico la
+   opción para ír a contacto.
+ 2.Plan1:
+ 3.Plan2:
+
+ 4.Contacto:
+Info extra del cliente y del servidor de unturned.
+

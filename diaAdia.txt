@@ -1,0 +1,2 @@
+Dia1:
+Construccion de las bases y definiendo el diseño con el cliente.
