@@ -1,3 +1,70 @@
-.pricipal-content{
-  background-image:url('./images/Home.webp') ;
+/*HOME STYLES*/
+.principal-content {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según sea necesario */
+  overflow: hidden; /* Oculta el contenido que se desborde si es necesario */
 }
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Oculta el contenido que se desborde si es necesario */
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.overlay-content {
+  position: relative;
+  top: 30%;
+  left: -27%; /* Desplaza el elemento un 110% del ancho del propio elemento hacia la izquierda */
+  text-align: start;
+  color: #fff; /* Color del texto */
+  z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+  padding: 20px; /* Ajusta el padding según sea necesario */
+}
+
+.texto-container-home {
+  max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.texto-container-home h1, .texto-container-home h2, .texto-container-home span {
+  color: #fff; /* Color del texto */
+}
+
+.texto-container-home h4 {
+  color: #fff; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente del texto */
+  line-height: 1.6; /* Espaciado entre líneas del texto */
+  text-align: left; /* Ajusta la alineación del texto según sea necesario */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.btn {
+  margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
+  padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón si no es necesario */
+  cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
+
+
