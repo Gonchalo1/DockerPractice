@@ -1,10 +1,18 @@
-import React from 'react';
-import '../App.css'; // Archivo CSS para estilos específicos de Home
+import React, { useState } from 'react';
+import '../App.css'; // Asegúrate de que este archivo CSS esté importado
 import backgroundImage from '../images/Home.webp';
+import useParallax from './animation/screenAnimation'; // Asegúrate de que la ruta sea correcta
 
 function Home() {
+    const [isTextVisible, setTextVisible] = useState(false);
+    const { handleMouseMove } = useParallax();
+
+    const toggleTextVisibility = () => {
+        setTextVisible(!isTextVisible);
+    };
+
     return (
-        <div className="principal-content">
+        <div className="principal-content" onMouseMove={handleMouseMove}>
             <div className="image-container">
                 <img src={backgroundImage} alt="Home Background" className="background-image" />
                 <div className="overlay-content">
@@ -18,7 +26,17 @@ function Home() {
                             make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
                         </h4>
                     </div>
-                    <button className="btn btn-primary">Learn More</button>
+                    <button className="btn btn-primary" onClick={toggleTextVisibility}>
+                        {isTextVisible ? "Ocultar detalles" : "Mostrar detalles"}
+                    </button>
+                    {isTextVisible && (
+                        <div className="additional-text">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, fermentum eros sit amet, placerat ante. 
+                                Suspendisse potenti. Nullam ultrices nunc nec magna placerat, ac porttitor ex facilisis.
+                            </p>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

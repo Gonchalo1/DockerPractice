@@ -1,18 +1,25 @@
-/*HOME STYLES*/
+/* App.css */
+
+/* Estilos del contenedor principal */
 .principal-content {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ajusta la altura según sea necesario */
-  overflow: hidden; /* Oculta el contenido que se desborde si es necesario */
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000; /* Color de fondo negro para el área fuera de la imagen */
 }
 
+/* Estilos del contenedor de la imagen */
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Oculta el contenido que se desborde si es necesario */
+  overflow: hidden;
+  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
 }
 
+/* Estilos de la imagen de fondo */
 .background-image {
   position: absolute;
   top: 0;
@@ -23,22 +30,29 @@
   z-index: -1; /* Coloca la imagen detrás del contenido */
 }
 
+/* Estilos del contenido superpuesto */
 .overlay-content {
-  position: relative;
+  position: absolute;
   top: 30%;
-  left: -27%; /* Desplaza el elemento un 110% del ancho del propio elemento hacia la izquierda */
+  left: 30%;
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
   text-align: start;
   color: #fff; /* Color del texto */
   z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
   padding: 20px; /* Ajusta el padding según sea necesario */
+  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
 }
 
+/* Estilos del contenedor de texto */
 .texto-container-home {
   max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
   margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-.texto-container-home h1, .texto-container-home h2, .texto-container-home span {
+/* Estilos para textos específicos */
+.texto-container-home h1,
+.texto-container-home h2,
+.texto-container-home span {
   color: #fff; /* Color del texto */
 }
 
@@ -50,6 +64,7 @@
   margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
+/* Estilos del botón */
 .btn {
   margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
   padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
@@ -58,13 +73,20 @@
   color: #fff; /* Color del texto del botón */
   border: none; /* Quita el borde del botón si no es necesario */
   cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
 .btn:hover {
   background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
 }
 
-
-
-
-
+/* Estilos para el texto adicional */
+.additional-text {
+  position: relative; /* Asegura superposición pero relativo al contenido */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%; /* Ocupa el 100% del contenedor */
+  z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+}

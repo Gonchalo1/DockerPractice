@@ -1,2 +1,2 @@
-Dia1:
+Dia1 Gonzalo:
 Construccion de las bases y definiendo el diseño con el cliente.
