@@ -1,7 +1,12 @@
+// Home.js
+
 import React, { useState } from 'react';
-import '../App.css'; // Asegúrate de que este archivo CSS esté importado
+import '../App.css';
 import backgroundImage from '../images/Home.webp';
-import useParallax from './animation/screenAnimation'; // Asegúrate de que la ruta sea correcta
+import useParallax from './animation/screenAnimation';
+import AudioPlayer from './audioPlayer'; // Importa el componente de audio
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
     const [isTextVisible, setTextVisible] = useState(false);
@@ -13,6 +18,7 @@ function Home() {
 
     return (
         <div className="principal-content" onMouseMove={handleMouseMove}>
+            <AudioPlayer />
             <div className="image-container">
                 <img src={backgroundImage} alt="Home Background" className="background-image" />
                 <div className="overlay-content">
@@ -26,8 +32,8 @@ function Home() {
                             make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
                         </h4>
                     </div>
-                    <button className="btn btn-primary" onClick={toggleTextVisibility}>
-                        {isTextVisible ? "Ocultar detalles" : "Mostrar detalles"}
+                    <button className="btn btn-primary text-button" onClick={toggleTextVisibility}>
+                        {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                     </button>
                     {isTextVisible && (
                         <div className="additional-text">

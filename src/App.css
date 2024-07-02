@@ -1,15 +1,16 @@
 /* App.css */
 
-/* Estilos del contenedor principal */
 .principal-content {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
   background-color: #000; /* Color de fondo negro para el área fuera de la imagen */
+  display: flex;
+  justify-content: center; /* Centra los contenidos horizontalmente */
+  align-items: center; /* Centra los contenidos verticalmente */
 }
 
-/* Estilos del contenedor de la imagen */
 .image-container {
   position: relative;
   width: 100%;
@@ -19,7 +20,6 @@
   transform: translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
 }
 
-/* Estilos de la imagen de fondo */
 .background-image {
   position: absolute;
   top: 0;
@@ -30,7 +30,6 @@
   z-index: -1; /* Coloca la imagen detrás del contenido */
 }
 
-/* Estilos del contenido superpuesto */
 .overlay-content {
   position: absolute;
   top: 30%;
@@ -43,13 +42,11 @@
   transition: transform 0.1s ease-out; /* Transición suave para movimiento */
 }
 
-/* Estilos del contenedor de texto */
 .texto-container-home {
   max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
   margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-/* Estilos para textos específicos */
 .texto-container-home h1,
 .texto-container-home h2,
 .texto-container-home span {
@@ -64,7 +61,13 @@
   margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
-/* Estilos del botón */
+
+
+
+.btn-secondary:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
 .btn {
   margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
   padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
@@ -80,13 +83,26 @@
   background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
 }
 
-/* Estilos para el texto adicional */
-.additional-text {
-  position: relative; /* Asegura superposición pero relativo al contenido */
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-  padding: 10px;
-  border-radius: 5px;
-  max-width: 80%; /* Ocupa el 100% del contenedor */
-  z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+.audio-container {
+  position: absolute;
+  top: -1%;
+  bottom: 20px; /* Posiciona el contenedor en la parte inferior */
+  right: 20px; /* Posiciona el contenedor a la derecha */
+  z-index: 10; /* Asegura que esté sobre otros elementos si es necesario */
+}
+
+/* App.css */
+
+.arrow-icon {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  color: #007bff; /* Color azul para el ícono */
+}
+
+.arrow-icon:hover {
+  color: #0056b3; /* Cambia el color al pasar el mouse */
 }
