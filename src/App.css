@@ -9,6 +9,11 @@
   display: flex;
   justify-content: center; /* Centra los contenidos horizontalmente */
   align-items: center; /* Centra los contenidos verticalmente */
+  transition: opacity 2s ease-in-out; /* Transición de 2 segundos para la opacidad */
+}
+
+.principal-content.fade-out {
+  opacity: 0; /* Reduce la opacidad a 0 para el efecto de desvanecimiento */
 }
 
 .image-container {
@@ -61,13 +66,6 @@
   margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
 }
 
-
-
-
-.btn-secondary:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
-}
-
 .btn {
   margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
   padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
@@ -91,8 +89,6 @@
   z-index: 10; /* Asegura que esté sobre otros elementos si es necesario */
 }
 
-/* App.css */
-
 .arrow-icon {
   position: fixed;
   top: 50%;
@@ -105,4 +101,172 @@
 
 .arrow-icon:hover {
   color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+
+
+  
+.redirect-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
+  color: #fff; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+  padding: 50px 50px; /* Padding para aumentar el área clicleable */
+  border: none; /* Elimina el borde */
+  text-align: center; /* Centra el contenido del botón */
+  
+}
+
+.redirect-button:hover {
+  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
+}
+
+.redirect-button-bottom{
+  position: absolute;
+  top: 90%;
+  right: 50%;
+  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
+  color: #fff; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+  padding: 50px 50px; /* Padding para aumentar el área clicleable */
+  border: none; /* Elimina el borde */
+  text-align: center; /* Centra el contenido del botón */
+  
+}
+
+
+
+.redirect-button-bottom:hover {
+  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*CONTACT*/
+
+
+/* App.css */
+
+.contact-principal-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000; /* Color de fondo negro para el área fuera de la imagen */
+  display: flex;
+  justify-content: center; /* Centra los contenidos horizontalmente */
+  align-items: center; /* Centra los contenidos verticalmente */
+  transition: opacity 2s ease-in-out; /* Transición de 2 segundos para la opacidad */
+}
+
+.contact-principal-content.fade-out {
+  opacity: 0; /* Reduce la opacidad a 0 para el efecto de desvanecimiento */
+}
+
+.contact-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+}
+
+.contact-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+
+.contact-overlay-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+  text-align: start;
+  color: #fff; /* Color del texto */
+  z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
+  padding: 20px; /* Ajusta el padding según sea necesario */
+  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
+}
+
+.contact-texto-container-home {
+  max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.contact-texto-container-home h1,
+.contact-texto-container-home h2,
+.contact-texto-container-home span {
+  color: #fff; /* Color del texto */
+}
+
+.contact-texto-container-home h4 {
+  color: #fff; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente del texto */
+  line-height: 1.6; /* Espaciado entre líneas del texto */
+  text-align: left; /* Ajusta la alineación del texto según sea necesario */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.contact-btn {
+  margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
+  padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Quita el borde del botón si no es necesario */
+  cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.contact-btn:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+.contact-audio-container {
+  position: absolute;
+  top: -1%;
+  bottom: 20px; /* Posiciona el contenedor en la parte inferior */
+  right: 20px; /* Posiciona el contenedor a la derecha */
+  z-index: 10; /* Asegura que esté sobre otros elementos si es necesario */
+}
+
+.contact-arrow-icon {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  color: #007bff; /* Color azul para el ícono */
+}
+
+.contact-arrow-icon:hover {
+  color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+.contact-redirect-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
+  color: #fff; /* Color del texto */
+  cursor: pointer; /* Cambia el cursor a pointer */
+  z-index: 100; /* Asegura que esté sobre otros elementos */
+  padding: 50px 50px; /* Padding para aumentar el área clicleable */
+  border: none; /* Elimina el borde */
+  text-align: center; /* Centra el contenido del botón */
+}
+
+.contact-redirect-button:hover {
+  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
 }

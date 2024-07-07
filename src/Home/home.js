@@ -1,49 +1,96 @@
-// Home.js
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import backgroundImage from '../images/Home.webp';
-import useParallax from './animation/screenAnimation';
-import AudioPlayer from './audioPlayer'; // Importa el componente de audio
+import useParallax from '../animation/screenAnimation';
+import AudioPlayer from '../audio/audioPlayer';
+import Audio from '../audio/home.mp3';
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function Home() {
-    const [isTextVisible, setTextVisible] = useState(false);
+    const [showWelcome, setShowWelcome] = useState(true);
+    const [isTextVisible, setTextVisible] = useState(true);
+    const [isTransitioning, setTransitioning] = useState(false);
     const { handleMouseMove } = useParallax();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowWelcome(false);
+        }, 2000);
+    }, []);
 
     const toggleTextVisibility = () => {
         setTextVisible(!isTextVisible);
     };
 
+    const handleButtonClick = (event) => {
+        event.preventDefault();
+        setTransitioning(true);
+
+        setTimeout(() => {
+            navigate('/contact');
+        }, 2000);
+    };
+
+    const handleBottomButtonClick = (event) => {
+        event.preventDefault();
+        setTransitioning(true);
+
+        setTimeout(() => {
+            navigate('/option1');
+        }, 2000);
+        
+    };
+
     return (
-        <div className="principal-content" onMouseMove={handleMouseMove}>
-            <AudioPlayer />
+        <div className={`principal-content ${isTransitioning ? 'fade-out' : ''}`} onMouseMove={handleMouseMove}>
             <div className="image-container">
                 <img src={backgroundImage} alt="Home Background" className="background-image" />
-                <div className="overlay-content">
-                    <div className="texto-container-home">
-                        <h1>Online Soon</h1>
-                        <h2>Build your <strong>team</strong></h2>
-                        <span>More details</span>
-                        <h4>
-                            Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                            make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
-                        </h4>
+                {showWelcome && (
+                    <div className="overlay-content">
+                        <h1>Bienvenido</h1>
                     </div>
-                    <button className="btn btn-primary text-button" onClick={toggleTextVisibility}>
-                        {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
-                    </button>
-                    {isTextVisible && (
-                        <div className="additional-text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, fermentum eros sit amet, placerat ante. 
-                                Suspendisse potenti. Nullam ultrices nunc nec magna placerat, ac porttitor ex facilisis.
-                            </p>
+                )}
+                {!showWelcome && (
+                    <div className="overlay-content">
+                        <div className="texto-container-home">
+                            <h1>Online Soon</h1>
+                            <h2>Build your <strong>team</strong></h2>
+                            <span>More details</span>
+                            <h4>
+                                Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
+                            </h4>
+                            <button className="btn btn-primary text-button" onClick={toggleTextVisibility}>
+                                {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
+                            </button>
+                            {isTextVisible && (
+                                <div className="additional-text">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, fermentum eros sit amet, placerat ante.
+                                        Suspendisse potenti. Nullam ultrices nunc nec magna placerat, ac porttitor ex facilisis.
+                                    </p>
+                                </div>
+                            )}
                         </div>
-                    )}
-                </div>
+                    </div>
+                )}
+                {!showWelcome && (
+                    <div className="button-container">
+                        <AudioPlayer  audioSrc={Audio}/>
+                        <div  className="btn btn-primary redirect-button" onClick={handleButtonClick}>
+                            <span>&gt;</span>
+                        </div>
+                        <div className="btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
+                            <span>&#8964; </span>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

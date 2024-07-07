@@ -1,2 +1,10 @@
 Dia1 Gonzalo:
 Construccion de las bases y definiendo el diseño con el cliente.
+Dia2 Gonzalo:
+Estuve implementando un botón de música y una animación de la pantalla, también 
+estuve tratando de aplicar la transición de un componente a otro, pero todavia no me sale.
+Dia3 Gonzalo:
+Buenas, estuve implementando más funcionalidades para y ya hice la navegación, consiste en
+ una funcion que espera unos segundos para hacer la animación, acompañado de la transición
+  y luego con un método te redirige a la seción, todavia falta mejorar algunas cosas y debugear 
+  algo de código, pero vamos bien.

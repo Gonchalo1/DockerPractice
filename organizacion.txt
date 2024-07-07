@@ -6,7 +6,7 @@ Lian web:
  4.Contacto.
 
 Diseño:
-esperando a que el cliente responda.
+Plantilla de behance de videojuegos.
 
  1.Inicio:
    Va a tener los 2 planes para elegír y en un botón chico la
