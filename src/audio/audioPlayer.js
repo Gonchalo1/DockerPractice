@@ -19,7 +19,7 @@ const AudioPlayer = ({ audioSrc }) => {
 
     return (
         <div className="audio-container">
-            <audio ref={audioRef}>
+            <audio ref={audioRef} loop>
                 <source src={audioSrc} type="audio/mpeg" />
                 Tu navegador no soporta la etiqueta de audio.
             </audio>

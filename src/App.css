@@ -1,272 +1,613 @@
-/* App.css */
+/* Estilos para clases comunes */
 
+/* Principal Content */
 .principal-content {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000; /* Color de fondo negro para el área fuera de la imagen */
+  background-color: #000;
   display: flex;
-  justify-content: center; /* Centra los contenidos horizontalmente */
-  align-items: center; /* Centra los contenidos verticalmente */
-  transition: opacity 2s ease-in-out; /* Transición de 2 segundos para la opacidad */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
 }
 
 .principal-content.fade-out {
-  opacity: 0; /* Reduce la opacidad a 0 para el efecto de desvanecimiento */
+  opacity: 0;
 }
 
+/* Image Container */
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
-  transform: translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+  transition: transform 0.1s ease-out;
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200));
 }
 
+/* Background Image */
 .background-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-  z-index: -1; /* Coloca la imagen detrás del contenido */
+  object-fit: cover;
+  z-index: -1;
 }
 
+/* Overlay Content */
 .overlay-content {
   position: absolute;
   top: 30%;
   left: 30%;
-  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
   text-align: start;
-  color: #fff; /* Color del texto */
-  z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
-  padding: 20px; /* Ajusta el padding según sea necesario */
-  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  transition: transform 0.1s ease-out;
 }
 
+/* Text Container for Home */
 .texto-container-home {
-  max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
-  margin: 0 auto; /* Centra el contenido horizontalmente */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .texto-container-home h1,
 .texto-container-home h2,
-.texto-container-home span {
-  color: #fff; /* Color del texto */
+.texto-container-home span,
+.texto-container-home h4 {
+  color: #fff;
 }
 
 .texto-container-home h4 {
-  color: #fff; /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente del texto */
-  line-height: 1.6; /* Espaciado entre líneas del texto */
-  text-align: left; /* Ajusta la alineación del texto según sea necesario */
-  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
+/* Button */
 .btn {
-  margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
-  padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
-  font-size: 16px; /* Tamaño de fuente del botón */
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Quita el borde del botón si no es necesario */
-  cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
-  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #0056b3;
 }
 
+/* Audio Container */
 .audio-container {
   position: absolute;
   top: -1%;
-  bottom: 20px; /* Posiciona el contenedor en la parte inferior */
-  right: 20px; /* Posiciona el contenedor a la derecha */
-  z-index: 10; /* Asegura que esté sobre otros elementos si es necesario */
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
+/* Arrow Icon */
 .arrow-icon {
   position: fixed;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
-  color: #007bff; /* Color azul para el ícono */
+  z-index: 1000;
+  color: #007bff;
 }
 
 .arrow-icon:hover {
-  color: #0056b3; /* Cambia el color al pasar el mouse */
+  color: #0056b3;
 }
 
-
-  
+/* Redirect Button */
 .redirect-button {
   position: absolute;
   top: 50%;
   right: 20px;
-  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
-  color: #fff; /* Color del texto */
-  cursor: pointer; /* Cambia el cursor a pointer */
-  z-index: 100; /* Asegura que esté sobre otros elementos */
-  padding: 50px 50px; /* Padding para aumentar el área clicleable */
-  border: none; /* Elimina el borde */
-  text-align: center; /* Centra el contenido del botón */
-  
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
 }
 
 .redirect-button:hover {
-  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
+  transform: translateY(-10px) scale(1.1);
 }
 
-.redirect-button-bottom{
+/* Redirect Button Bottom */
+.redirect-button-bottom {
   position: absolute;
   top: 90%;
   right: 50%;
-  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
-  color: #fff; /* Color del texto */
-  cursor: pointer; /* Cambia el cursor a pointer */
-  z-index: 100; /* Asegura que esté sobre otros elementos */
-  padding: 50px 50px; /* Padding para aumentar el área clicleable */
-  border: none; /* Elimina el borde */
-  text-align: center; /* Centra el contenido del botón */
-  
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
 }
-
-
 
 .redirect-button-bottom:hover {
-  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
+  transform: translateY(-10px) scale(1.1);
 }
-
-
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*CONTACT*/
+/* Estilos duplicados para contact */
 
-
-/* App.css */
-
+/* Contact Principal Content */
 .contact-principal-content {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000; /* Color de fondo negro para el área fuera de la imagen */
+  background-color: #000;
   display: flex;
-  justify-content: center; /* Centra los contenidos horizontalmente */
-  align-items: center; /* Centra los contenidos verticalmente */
-  transition: opacity 2s ease-in-out; /* Transición de 2 segundos para la opacidad */
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
 }
 
 .contact-principal-content.fade-out {
-  opacity: 0; /* Reduce la opacidad a 0 para el efecto de desvanecimiento */
+  opacity: 0;
 }
 
+/* Contact Image Container */
 .contact-image-container {
   position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
-  transform: translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+  transition: transform 0.1s ease-out;
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200));
 }
 
+/* Contact Background Image */
 .contact-background-image {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-  z-index: -1; /* Coloca la imagen detrás del contenido */
+  object-fit: cover;
+  z-index: -1;
 }
 
+/* Contact Overlay Content */
 .contact-overlay-content {
   position: absolute;
   top: 30%;
   left: 30%;
-  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200)); /* Usar variables CSS */
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
   text-align: start;
-  color: #fff; /* Color del texto */
-  z-index: 1; /* Asegura que el contenido esté sobre la imagen de fondo */
-  padding: 20px; /* Ajusta el padding según sea necesario */
-  transition: transform 0.1s ease-out; /* Transición suave para movimiento */
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  transition: transform 0.1s ease-out;
 }
 
+/* Contact Text Container */
 .contact-texto-container-home {
-  max-width: 600px; /* Ajusta el ancho máximo del contenedor de texto según sea necesario */
-  margin: 0 auto; /* Centra el contenido horizontalmente */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-texto-container-home h1,
 .contact-texto-container-home h2,
-.contact-texto-container-home span {
-  color: #fff; /* Color del texto */
+.contact-texto-container-home span,
+.contact-texto-container-home h4 {
+  color: #fff;
 }
 
 .contact-texto-container-home h4 {
-  color: #fff; /* Color del texto */
-  font-size: 16px; /* Tamaño de fuente del texto */
-  line-height: 1.6; /* Espaciado entre líneas del texto */
-  text-align: left; /* Ajusta la alineación del texto según sea necesario */
-  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
+/* Contact Button */
 .contact-btn {
-  margin-top: 20px; /* Ajusta el margen superior del botón según sea necesario */
-  padding: 10px 20px; /* Ajusta el padding del botón según sea necesario */
-  font-size: 16px; /* Tamaño de fuente del botón */
-  background-color: #007bff; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Quita el borde del botón si no es necesario */
-  cursor: pointer; /* Cambia el cursor a pointer para indicar que es interactivo */
-  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 .contact-btn:hover {
-  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+  background-color: #0056b3;
 }
 
+/* Contact Audio Container */
 .contact-audio-container {
   position: absolute;
   top: -1%;
-  bottom: 20px; /* Posiciona el contenedor en la parte inferior */
-  right: 20px; /* Posiciona el contenedor a la derecha */
-  z-index: 10; /* Asegura que esté sobre otros elementos si es necesario */
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
+/* Contact Arrow Icon */
 .contact-arrow-icon {
   position: fixed;
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
   cursor: pointer;
-  z-index: 1000; /* Asegura que esté sobre otros elementos */
-  color: #007bff; /* Color azul para el ícono */
+  z-index: 1000;
+  color: #007bff;
 }
 
 .contact-arrow-icon:hover {
-  color: #0056b3; /* Cambia el color al pasar el mouse */
+  color: #0056b3;
 }
+
+/* Contact Redirect Button */
 .contact-redirect-button {
   position: absolute;
   top: 50%;
-  right: 20px;
-  transform: translateY(-50%) scale(1); /* Escala inicial de 1 */
-  color: #fff; /* Color del texto */
-  cursor: pointer; /* Cambia el cursor a pointer */
-  z-index: 100; /* Asegura que esté sobre otros elementos */
-  padding: 50px 50px; /* Padding para aumentar el área clicleable */
-  border: none; /* Elimina el borde */
-  text-align: center; /* Centra el contenido del botón */
+  margin-left: 10px;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+
 }
 
 .contact-redirect-button:hover {
-  transform: translateY(-10px) scale(1.1); /* Cambia la escala al pasar el mouse */
+  transform: translateY(-10px) scale(1.1);
+}
+
+.pointer-email-contact{
+  cursor: pointer;
+}
+.bi-discord {
+  font-size: 5vh; /* Tamaño de fuente inicial */
+  color: white; /* Color de texto inicial */
+  text-decoration: none; /* Quita el subrayado del enlace */
+  transition: color 1.5s ease-in-out, font-size 1s ease; /* Transiciones de color y tamaño de fuente */
+}
+
+.bi-discord:hover {
+  color: #000; /* Color de texto al poner el mouse encima */
+  font-size: 4.1em; /* Tamaño de fuente al poner el mouse encima */
+}
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* Estilos para Option1 */
+
+/* Principal Content */
+.option1-principal-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
+}
+
+.option1-principal-content.fade-out {
+  opacity: 0;
+}
+
+/* Image Container */
+.option1-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200));
+}
+
+/* Background Image */
+.option1-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay Content */
+.option1-overlay-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
+  text-align: start;
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  transition: transform 0.1s ease-out;
+}
+
+/* Text Container for Home */
+.option1-texto-container-home {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.option1-texto-container-home h1,
+.option1-texto-container-home h2,
+.option1-texto-container-home span,
+.option1-texto-container-home h4 {
+  color: #fff;
+}
+
+.option1-texto-container-home h4 {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.option1-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.option1-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Audio Container */
+.option1-audio-container {
+  position: absolute;
+  top: -1%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Arrow Icon */
+.option1-arrow-icon {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000;
+  color: #007bff;
+}
+
+.option1-arrow-icon:hover {
+  color: #0056b3;
+}
+
+/* Redirect Button */
+.option1-redirect-button {
+  position: absolute;
+  top: 10%;
+  right: 20px;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
+}
+
+.option1-redirect-button:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* Redirect Button Bottom */
+.option1-redirect-button-bottom {
+  position: absolute;
+  top: 90%;
+  right: 50%;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
+}
+
+.option1-redirect-button-bottom:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/* OPTION2 */
+
+/* Principal Content */
+.option2-principal-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 2s ease-in-out;
+}
+
+.option2-principal-content.fade-out {
+  opacity: 0;
+}
+
+/* Image Container */
+.option2-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.1s ease-out;
+  transform: translate(var(--offsetX, 200), var(--offsetY, 200));
+}
+
+/* Background Image */
+.option2-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Overlay Content */
+.option2-overlay-content {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
+  text-align: start;
+  color: #fff;
+  z-index: 1;
+  padding: 20px;
+  transition: transform 0.1s ease-out;
+}
+
+/* Text Container for Home */
+.option2-texto-container-home {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.option2-texto-container-home h1,
+.option2-texto-container-home h2,
+.option2-texto-container-home span,
+.option2-texto-container-home h4 {
+  color: #fff;
+}
+
+.option2-texto-container-home h4 {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.option2-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.option2-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Audio Container */
+.option2-audio-container {
+  position: absolute;
+  top: -1%;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+/* Arrow Icon */
+.option2-arrow-icon {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1000;
+  color: #007bff;
+}
+
+.option2-arrow-icon:hover {
+  color: #0056b3;
+}
+
+/* Redirect Button */
+.option2-redirect-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
+}
+
+.option2-redirect-button:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* Redirect Button Bottom */
+.option2-redirect-button-bottom {
+  position: absolute;
+  top: 90%;
+  right: 50%;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
+}
+
+.option2-redirect-button-bottom:hover {
+  transform: translateY(-10px) scale(1.1);
 }

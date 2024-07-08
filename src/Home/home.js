@@ -58,22 +58,21 @@ function Home() {
                 {!showWelcome && (
                     <div className="overlay-content">
                         <div className="texto-container-home">
-                            <h1>Online Soon</h1>
-                            <h2>Build your <strong>team</strong></h2>
-                            <span>More details</span>
+                            <h1>RedlineRp </h1>
+                            <h2>unturned  <strong>comunity</strong></h2>
                             <h4>
-                                Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
+                            Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
+                             en ambos modos la vas a pasar genial.
                             </h4>
+                            <span><strong>Detalles</strong></span><br/>
                             <button className="btn btn-primary text-button" onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
                                 <div className="additional-text">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, fermentum eros sit amet, placerat ante.
-                                        Suspendisse potenti. Nullam ultrices nunc nec magna placerat, ac porttitor ex facilisis.
+                                    En la modalidad Rp life vas a poder hacer tu historia y ser lo que quieras ser puedes ser policía, bombero, médico etc.
+                                    Para navegar mejór tienes los botones en los laterales de la pantalla donde puedes ver los planes de pago y contactarnos.
                                     </p>
                                 </div>
                             )}

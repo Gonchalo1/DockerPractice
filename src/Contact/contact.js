@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
-import backgroundImage from '../images/Home.webp';
+import backgroundImage from '../images/contact.webp';
 import useParallax from '../animation/screenAnimation';
 import AudioPlayer from '../audio/audioPlayer';
 import Audio from '../audio/contact.mp3';
@@ -15,6 +15,7 @@ function Contact() {
     const [isTransitioning, setTransitioning] = useState(false);
     const { handleMouseMove } = useParallax();
     const navigate = useNavigate();
+    const inputRef = useRef(null);
 
     useEffect(() => {
         setTimeout(() => {
@@ -35,6 +36,18 @@ function Contact() {
         }, 2000);
     };
 
+    const copyToClipboard = () => {
+        if (inputRef.current) {
+            // Seleccionar el texto dentro del input
+            inputRef.current.select();
+            // Copiar el texto al portapapeles
+            document.execCommand('copy');
+            // Deseleccionar el input
+            inputRef.current.setSelectionRange(0, 0);
+            alert('¡Texto copiado al portapapeles!');
+        }
+    };
+
     const handleBottomButtonClick = (event) => {
         event.preventDefault();
         setTransitioning(true);
@@ -42,7 +55,6 @@ function Contact() {
         setTimeout(() => {
             navigate('/option1');
         }, 2000);
-        
     };
 
     return (
@@ -51,28 +63,41 @@ function Contact() {
                 <img src={backgroundImage} alt="Home Background" className="contact-background-image" />
                 {showWelcome && (
                     <div className="contact-overlay-content">
-                        <h1>Contact</h1>
+                        <h1>Contacto</h1>
                     </div>
                 )}
                 {!showWelcome && (
                     <div className="contact-overlay-content">
                         <div className="contact-texto-container-home">
-                            <h1>Online Soon</h1>
-                            <h2>Build your <strong>team</strong></h2>
-                            <span>More details</span>
+                            <h1>Contacto</h1>
                             <h4>
-                                Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-                                make a type specimen book. It has survived not only five centuries, but also the leap into electronic.
+                                En esta sección podrás encontrar información del servidor y cómo ingresar al mismo, para cualquier consulta o medios de pago.
                             </h4>
+                            <article>ACEPTAMOS: <i className="bi bi-paypal"></i> </article>
                             <button className="contact-btn btn-primary text-button" onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
                                 <div className="additional-text">
                                     <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac orci condimentum, fermentum eros sit amet, placerat ante.
-                                        Suspendisse potenti. Nullam ultrices nunc nec magna placerat, ac porttitor ex facilisis.
+                                    <i className="bi bi-envelope-at"></i> 
+                                    <strong>Email del Admin:</strong>
+                                        <br />    
+                                        <input
+                                            type="text"
+                                            value="liannielsen82@gmail.com"
+                                            readOnly
+                                            ref={inputRef}
+                                            style={{ width: '200px', marginRight: '10px' }}
+                                        />
+                                        <button className="btn btn-primary" onClick={copyToClipboard}>
+                                            Copiar
+                                        </button>
+                                    </p>
+                                    <p>
+                                        <Link to='https://discord.com/invite/kqF3j5vpX2'>
+                                            <i className="bi bi-discord"></i>
+                                        </Link>
                                     </p>
                                 </div>
                             )}
