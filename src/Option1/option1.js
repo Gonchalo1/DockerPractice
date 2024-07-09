@@ -65,8 +65,8 @@ function Option1() {
                             <h1>RedlineRp </h1>
                             <h2>RP LIFE </h2>
                             <h4>
-                                Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
-                                en ambos modos la vas a pasar genial.
+                            En el server Rplife está orientado en argentina donde vas a poder ser lo que quieras 
+                            También podes comprar roles privados o vips para mejorar tu experiencia de juego.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
                             <button className="option1-btn btn btn-primary text-button" onClick={toggleTextVisibility}>
@@ -86,9 +86,7 @@ function Option1() {
                 {!showWelcome && (
                     <div className="option1-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className="option1-btn btn btn-primary redirect-button" onClick={handleTopButtonClick}>
-                            <span>&#8963; </span> {/* Arrow up symbol */}
-                        </div>
+                         
                         <div className="option1-btn btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
                             <span>&#8964; </span> {/* Arrow down symbol */}
                         </div>

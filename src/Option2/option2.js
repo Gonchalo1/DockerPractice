@@ -63,10 +63,10 @@ function Option2() {
                     <div className="option2-overlay-content">
                         <div className="option2-texto-container-home">
                             <h1>RedlineRp </h1>
-                            <h2>RP LIFE </h2>
+                            <h2>RP MILITARY </h2>
                             <h4>
-                                Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
-                                en ambos modos la vas a pasar genial.
+                            En el Rpmilitar podrás luchar en el bando Ruso o Ukraniano por el poder del país podes ser ingeniero
+                             piloto sniper etc en este modo podes comprar facciones privadas/personalizadas.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
                             <button className="option2-btn btn btn-primary text-button" onClick={toggleTextVisibility}>
@@ -75,8 +75,7 @@ function Option2() {
                             {isTextVisible && (
                                 <div className="option2-additional-text additional-text">
                                     <p>
-                                        En la modalidad Rp life vas a poder hacer tu historia y ser lo que quieras ser puedes ser policía, bombero, médico etc.
-                                        Para navegar mejór tienes los botones en los laterales de la pantalla donde puedes ver los planes de pago y contactarnos.
+                                    Las cosas de las facciones personalizadas van a ser vigiladas x el staff para evitar el pay to win.
                                     </p>
                                 </div>
                             )}
@@ -86,11 +85,8 @@ function Option2() {
                 {!showWelcome && (
                     <div className="option2-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className="option2-btn btn btn-primary redirect-button" onClick={handleTopButtonClick}>
-                            <span>&#8963; </span> {/* Arrow up symbol */}
-                        </div>
                         <div className="option2-btn btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
-                            <span>&#8964; </span> {/* Arrow down symbol */}
+                            <span>&#8963; </span> {/* Arrow down symbol */}
                         </div>
                     </div>
                 )}

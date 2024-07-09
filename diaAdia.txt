@@ -1,10 +1,20 @@
 Dia1 Gonzalo:
 Construccion de las bases y definiendo el diseño con el cliente.
+
 Dia2 Gonzalo:
 Estuve implementando un botón de música y una animación de la pantalla, también 
 estuve tratando de aplicar la transición de un componente a otro, pero todavia no me sale.
+
 Dia3 Gonzalo:
 Buenas, estuve implementando más funcionalidades para y ya hice la navegación, consiste en
- una funcion que espera unos segundos para hacer la animación, acompañado de la transición
-  y luego con un método te redirige a la seción, todavia falta mejorar algunas cosas y debugear 
-  algo de código, pero vamos bien.
+una funcion que espera unos segundos para hacer la animación, acompañado de la transición
+y luego con un método te redirige a la seción, todavia falta mejorar algunas cosas y debugear 
+algo de código, pero vamos bien.
+
+Dia4 Gonzalo:
+Buenas, estuve realizando las secciones y añadiendole estética y diferentes funcionalidades 
+extra y estilos, para que quede bien, contacto ya queda como está, falta rp life y rp militar. 
+Luego de terminar eso tengo que editar botones, tipografías y colores para temrinar de añadirle
+una temática NEON.
+
+Estoy cerca de terminar jajaj.

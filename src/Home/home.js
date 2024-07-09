@@ -64,18 +64,7 @@ function Home() {
                             Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
                              en ambos modos la vas a pasar genial.
                             </h4>
-                            <span><strong>Detalles</strong></span><br/>
-                            <button className="btn btn-primary text-button" onClick={toggleTextVisibility}>
-                                {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
-                            </button>
-                            {isTextVisible && (
-                                <div className="additional-text">
-                                    <p>
-                                    En la modalidad Rp life vas a poder hacer tu historia y ser lo que quieras ser puedes ser policía, bombero, médico etc.
-                                    Para navegar mejór tienes los botones en los laterales de la pantalla donde puedes ver los planes de pago y contactarnos.
-                                    </p>
-                                </div>
-                            )}
+                         
                         </div>
                     </div>
                 )}
