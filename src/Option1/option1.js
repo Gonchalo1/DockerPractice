@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
 import backgroundImage from '../images/fondoRpLife.jpg';
 import useParallax from '../animation/screenAnimation';
@@ -26,12 +26,12 @@ function Option1() {
         setTextVisible(!isTextVisible);
     };
 
-    const handleButtonClick = (event) => {
+    const handleTopButtonClick = (event) => {
         event.preventDefault();
         setTransitioning(true);
 
         setTimeout(() => {
-            navigate('/contact');
+            navigate('/');
         }, 2000);
     };
 
@@ -44,10 +44,11 @@ function Option1() {
         }, 2000);
     };
 
-    const handleTopButtonClick = (event) => {
-        event.preventDefault();
-        // Handle top button click functionality here
-        console.log('Top button clicked');
+    const handleDiscordInviteClick = () => {
+        window.open('https://discord.com/invite/kqF3j5vpX2', '_blank');
+        setTimeout(() => {
+            window.location.href = 'https://discordapp.com/channels/1110983224752099398/1145810158283395135';
+        }, 5000); // Espera 5 segundos antes de redirigir al canal específico
     };
 
     return (
@@ -56,7 +57,7 @@ function Option1() {
                 <img src={backgroundImage} alt="Home Background" className="option1-background-image" />
                 {showWelcome && (
                     <div className="option1-overlay-content">
-                        <h1>RP LIFE</h1>
+                        <h1>PLAN  <br/>RP LIFE</h1>
                     </div>
                 )}
                 {!showWelcome && (
@@ -69,7 +70,7 @@ function Option1() {
                             También podes comprar roles privados o vips para mejorar tu experiencia de juego.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
-                            <button className="option1-btn btn btn-primary text-button" onClick={toggleTextVisibility}>
+                            <button className="option1-btn btn btn-light text-button" onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
@@ -78,6 +79,18 @@ function Option1() {
                                         En la modalidad Rp life vas a poder hacer tu historia y ser lo que quieras ser puedes ser policía, bombero, médico etc.
                                         Para navegar mejór tienes los botones en los laterales de la pantalla donde puedes ver los planes de pago y contactarnos.
                                     </p>
+                                    <button className="btn btn-dark VIP" onClick={handleDiscordInviteClick}>
+                                        <h3>VIP HERA</h3>
+                                    </button>
+                                    <button className="btn btn-dark VIP" onClick={handleDiscordInviteClick}>
+                                        <h3>VIP HADES</h3>
+                                    </button>
+                                    <br/>
+                                    <span>
+                                    MENSUAL 5 USD/------------- MENSUAL 10USD<br/> 
+                                    TRIMESTRAL 10 USD/--------- TRIMESTRAL 12USD<br/>
+                                    PERMANENTE 12 USD/-------- PERMANENTE 16USD
+                                     </span>
                                 </div>
                             )}
                         </div>
@@ -86,8 +99,11 @@ function Option1() {
                 {!showWelcome && (
                     <div className="option1-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
-                         
-                        <div className="option1-btn btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
+                        <div className="option1-btn btn btn-light option1-redirect-button-top" onClick={handleTopButtonClick}>
+                            <span>&#8963; </span> {/* Arrow up symbol */}
+                        </div>
+
+                        <div className="option1-btn btn btn-light option1-redirect-button-bottom" onClick={handleBottomButtonClick}>
                             <span>&#8964; </span> {/* Arrow down symbol */}
                         </div>
                     </div>

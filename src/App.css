@@ -41,7 +41,7 @@
 /* Overlay Content */
 .overlay-content {
   position: absolute;
-  top: 30%;
+  top: 40%;
   left: 30%;
   transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
   text-align: start;
@@ -51,6 +51,13 @@
   transition: transform 0.1s ease-out;
 }
 
+
+.overlay-content h1 {
+  font-family: unset;
+  color: #fff;
+  font-size: 60px;
+}
+
 /* Text Container for Home */
 .texto-container-home {
   max-width: 600px;
@@ -58,10 +65,15 @@
 }
 
 .texto-container-home h1,
-.texto-container-home h2,
+.texto-container-home h2{
+  font-family: unset;
+  color: #fff;
+  font-size: 60px;
+}
 .texto-container-home span,
 .texto-container-home h4 {
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .texto-container-home h4 {
@@ -86,7 +98,9 @@
 .btn:hover {
   background-color: #0056b3;
 }
-
+.button-container{
+  color: #fff;
+}
 /* Audio Container */
 .audio-container {
   position: absolute;
@@ -94,6 +108,7 @@
   bottom: 20px;
   right: 20px;
   z-index: 10;
+  
 }
 
 /* Arrow Icon */
@@ -227,17 +242,13 @@
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 10px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #fff;
   border: none;
   cursor: pointer;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
-.contact-btn:hover {
-  background-color: #0056b3;
-}
 
 /* Contact Audio Container */
 .contact-audio-container {
@@ -259,9 +270,6 @@
   color: #007bff;
 }
 
-.contact-arrow-icon:hover {
-  color: #0056b3;
-}
 
 /* Contact Redirect Button */
 .contact-redirect-button {
@@ -269,7 +277,6 @@
   top: 50%;
   margin-left: 10px;
   transform: translateY(-50%) scale(1);
-  color: #fff;
   cursor: pointer;
   z-index: 100;
   border: none;
@@ -280,6 +287,7 @@
 
 .contact-redirect-button:hover {
   transform: translateY(-10px) scale(1.1);
+  background-color: #fff;
 }
 
 .pointer-email-contact{
@@ -289,7 +297,7 @@
   font-size: 5vh; /* Tamaño de fuente inicial */
   color: white; /* Color de texto inicial */
   text-decoration: none; /* Quita el subrayado del enlace */
-  transition: color 1.5s ease-in-out, font-size 1s ease; /* Transiciones de color y tamaño de fuente */
+  transition: color 0.5s ease-in-out, font-size 1s ease; /* Transiciones de color y tamaño de fuente */
 }
 
 .bi-discord:hover {
@@ -320,6 +328,11 @@
   align-items: center;
   transition: opacity 2s ease-in-out;
 }
+.option1-overlay-content h1 {
+  font-family: unset;
+  color: #fff;
+  font-size: 60px;
+}
 
 .option1-principal-content.fade-out {
   opacity: 0;
@@ -349,8 +362,8 @@
 /* Overlay Content */
 .option1-overlay-content {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 20%;
+  left: 35%;
   transform: translateX(-50%) translate(var(--offsetX, 200), var(--offsetY, 200));
   text-align: start;
   color: #fff;
@@ -369,6 +382,7 @@
 .option1-texto-container-home h2,
 .option1-texto-container-home span,
 .option1-texto-container-home h4 {
+  font-family: monospace   ;
   color: #fff;
 }
 
@@ -378,7 +392,9 @@
   text-align: left;
   margin-bottom: 20px;
 }
-
+.VIP{
+  margin: 10px;
+}
 /* Button */
 .option1-btn {
   margin-top: 20px;
@@ -455,8 +471,18 @@
   transform: translateY(-10px) scale(1.1);
 }
 
-
-
+.option1-redirect-button-top{
+  position: absolute;
+  top: 2%;
+  right: 50%;
+  transform: translateY(-50%) scale(1);
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+  padding: 50px 50px;
+  border: none;
+  text-align: center;
+}
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 
@@ -610,4 +636,10 @@
 
 .option2-redirect-button-bottom:hover {
   transform: translateY(-10px) scale(1.1);
+}
+
+.option2-overlay-content h1 {
+  font-family: unset;
+  color: #fff;
+  font-size: 60px;
 }

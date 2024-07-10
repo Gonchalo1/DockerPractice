@@ -23,8 +23,8 @@ const AudioPlayer = ({ audioSrc }) => {
                 <source src={audioSrc} type="audio/mpeg" />
                 Tu navegador no soporta la etiqueta de audio.
             </audio>
-            <button className="btn btn-primary audio-button" onClick={toggleAudio}>
-                {audioPlaying ? 'Pause Audio' : 'Play Audio'}
+            <button className="btn btn-light audio-button" onClick={toggleAudio}>
+                {audioPlaying ? 'Pause Audio' : 'PLAY AUDIO'}
             </button>
         </div>
     );

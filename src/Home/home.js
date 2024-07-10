@@ -6,10 +6,6 @@ import useParallax from '../animation/screenAnimation';
 import AudioPlayer from '../audio/audioPlayer';
 import Audio from '../audio/home.mp3';
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
-
 function Home() {
     const [showWelcome, setShowWelcome] = useState(true);
     const [isTextVisible, setTextVisible] = useState(true);
@@ -71,10 +67,10 @@ function Home() {
                 {!showWelcome && (
                     <div className="button-container">
                         <AudioPlayer  audioSrc={Audio}/>
-                        <div  className="btn btn-primary redirect-button" onClick={handleButtonClick}>
+                        <div  className="btn btn-light redirect-button" onClick={handleButtonClick}>
                             <span>&gt;</span>
                         </div>
-                        <div className="btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
+                        <div className="btn btn-light redirect-button-bottom" onClick={handleBottomButtonClick}>
                             <span>&#8964; </span>
                         </div>
                     </div>

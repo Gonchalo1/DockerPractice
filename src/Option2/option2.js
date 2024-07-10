@@ -56,7 +56,7 @@ function Option2() {
                 <img src={backgroundImage} alt="Home Background" className="option2-background-image" />
                 {showWelcome && (
                     <div className="option2-overlay-content">
-                        <h1>RP MILITARY</h1>
+                        <h1>PLAN <br/>RP MILITARY</h1>
                     </div>
                 )}
                 {!showWelcome && (
@@ -69,7 +69,7 @@ function Option2() {
                              piloto sniper etc en este modo podes comprar facciones privadas/personalizadas.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
-                            <button className="option2-btn btn btn-primary text-button" onClick={toggleTextVisibility}>
+                            <button className="option2-btn btn btn-light text-button" onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
@@ -85,7 +85,7 @@ function Option2() {
                 {!showWelcome && (
                     <div className="option2-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className="option2-btn btn btn-primary redirect-button-bottom" onClick={handleBottomButtonClick}>
+                        <div className="option2-btn btn btn-light redirect-button-bottom" onClick={handleBottomButtonClick}>
                             <span>&#8963; </span> {/* Arrow down symbol */}
                         </div>
                     </div>
