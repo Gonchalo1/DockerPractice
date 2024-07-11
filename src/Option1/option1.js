@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../App.css';
-import backgroundImage from '../images/fondoRpLife.jpg';
+import backgroundImage from '../images/1option.webp';
 import useParallax from '../animation/screenAnimation';
 import AudioPlayer from '../audio/audioPlayer';
 import Audio from '../audio/rpLife.mp3';

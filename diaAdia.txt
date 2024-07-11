@@ -18,3 +18,6 @@ Luego de terminar eso tengo que editar botones, tipografías y colores para temr
 una temática NEON.
 
 Estoy cerca de terminar jajaj.
+
+Dia5 Gonzalo:
+Estoy por terminar, nomas me falta la responsividad.

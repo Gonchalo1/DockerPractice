@@ -164,6 +164,44 @@
   transform: translateY(-10px) scale(1.1);
 }
 
+
+
+
+/* Media Queries */
+
+
+
+@media (max-width: 768px) and (min-width: 652px) {
+  .overlay-content {
+    top: 30%;
+    left: 20%;
+    transform: translateX(-20%) translate(var(--offsetX, 100), var(--offsetY, 100));
+  }
+
+  .overlay-content h1 {
+    font-size: 40px;
+  }
+
+  .texto-container-home {
+    padding: 10px;
+  }
+
+  .texto-container-home h1,
+  .texto-container-home h2 {
+    font-size: 40px;
+  }
+
+  .texto-container-home h4 {
+    font-size: 14px;
+  }
+
+  .redirect-button,
+  .redirect-button-bottom {
+    padding: 30px 30px;
+  }
+}
+
+
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Estilos duplicados para contact */
@@ -308,6 +346,37 @@
 }
 
 
+
+
+/* Media Queries */
+@media (max-width: 768px) and (min-width: 652px){
+  .contact-overlay-content {
+    top: 30%;
+    left: 20%;
+    transform: translateX(-50%) translate(var(--offsetX, 100), var(--offsetY, 100));
+  }
+
+  .contact-overlay-content h1 {
+    font-size: 40px;
+  }
+
+  .contact-texto-container-home {
+    padding: 10px;
+  }
+
+  .contact-texto-container-home h1,
+  .contact-texto-container-home h4 {
+    font-size: 40px;
+  }
+
+  .contact-texto-container-home h4 {
+    font-size: 14px;
+  }
+
+  .contact-redirect-button {
+    padding: 30px 30px;
+  }
+}
 
 
 

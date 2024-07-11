@@ -12,6 +12,7 @@ function Home() {
     const [isTransitioning, setTransitioning] = useState(false);
     const { handleMouseMove } = useParallax();
     const navigate = useNavigate();
+    const isMobile = window.innerWidth <= 768;
 
     useEffect(() => {
         setTimeout(() => {
@@ -42,7 +43,10 @@ function Home() {
     };
 
     return (
-        <div className={`principal-content ${isTransitioning ? 'fade-out' : ''}`} onMouseMove={handleMouseMove}>
+        <div 
+            className={`principal-content ${isTransitioning ? 'fade-out' : ''}`} 
+            onMouseMove={isMobile ? null : handleMouseMove}
+        >
             <div className="image-container">
                 <img src={backgroundImage} alt="Home Background" className="background-image" />
                 {showWelcome && (
