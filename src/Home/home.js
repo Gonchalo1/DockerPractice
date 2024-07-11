@@ -39,7 +39,6 @@ function Home() {
         setTimeout(() => {
             navigate('/option1');
         }, 2000);
-        
     };
 
     return (
@@ -48,30 +47,32 @@ function Home() {
                 <img src={backgroundImage} alt="Home Background" className="background-image" />
                 {showWelcome && (
                     <div className="overlay-content">
-                        <h1>Bienvenido</h1>
+                        <h1 className="neon-text">Bienvenido</h1>
                     </div>
                 )}
                 {!showWelcome && (
                     <div className="overlay-content">
                         <div className="texto-container-home">
-                            <h1>RedlineRp </h1>
-                            <h2>unturned  <strong>comunity</strong></h2>
+                            <h1 className="neon-text">RedlineRp </h1>
+                            <h2 className="neon-text">unturned  <strong>comunity</strong></h2>
                             <h4>
-                            Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
-                             en ambos modos la vas a pasar genial.
+                                Bienvenidos a la tienda da web oficial de RedLineRP Unturned comunity Somos una comunidad con 2 modos de juego el Rp life y el Rp militar
+                                en ambos modos la vas a pasar genial.
                             </h4>
-                         
+                            <p>         
+                                Para navegar mejór tienes los botones en los laterales de la pantalla donde puedes ver los planes de pago y contactarnos.
+                            </p>
                         </div>
                     </div>
                 )}
                 {!showWelcome && (
                     <div className="button-container">
-                        <AudioPlayer  audioSrc={Audio}/>
-                        <div  className="btn btn-light redirect-button" onClick={handleButtonClick}>
+                        <AudioPlayer audioSrc={Audio} />
+                        <div className="btn btn-light redirect-button neon-button" onClick={handleButtonClick}>
                             <span>&gt;</span>
                         </div>
-                        <div className="btn btn-light redirect-button-bottom" onClick={handleBottomButtonClick}>
-                            <span>&#8964; </span>
+                        <div className="btn btn-light redirect-button-bottom neon-button" onClick={handleBottomButtonClick}>
+                            <span>&#8964;</span>
                         </div>
                     </div>
                 )}

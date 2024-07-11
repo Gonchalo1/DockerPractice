@@ -38,11 +38,8 @@ function Contact() {
 
     const copyToClipboard = () => {
         if (inputRef.current) {
-            // Seleccionar el texto dentro del input
             inputRef.current.select();
-            // Copiar el texto al portapapeles
             document.execCommand('copy');
-            // Deseleccionar el input
             inputRef.current.setSelectionRange(0, 0);
             alert('¡Texto copiado al portapapeles!');
         }
@@ -63,25 +60,25 @@ function Contact() {
                 <img src={backgroundImage} alt="Home Background" className="contact-background-image" />
                 {showWelcome && (
                     <div className="contact-overlay-content">
-                        <h1>Contacto</h1>
+                        <h1 className="neon-text">Contacto</h1>
                     </div>
                 )}
                 {!showWelcome && (
                     <div className="contact-overlay-content">
                         <div className="contact-texto-container-home">
-                            <h1>Contacto</h1>
-                            <h4>
+                            <h1 className="neon-text">Contacto</h1>
+                            <h4 className="neon-text">
                                 En esta sección podrás encontrar información del servidor y cómo ingresar al mismo, para cualquier consulta o medios de pago.
                             </h4>
-                            <article><strong>ACEPTAMOS: </strong><i className="bi bi-paypal"></i> </article>
-                            <button className="contact-btn btn-light text-button" onClick={toggleTextVisibility}>
+                            <article className="neon-text"><strong>ACEPTAMOS: </strong><i className="bi bi-paypal"></i> </article>
+                            <button className="contact-btn btn-light text-button neon-button" onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
                                 <div className="additional-text">
-                                    <p>
-                                    <i className="bi bi-envelope-at"></i> 
-                                    <strong> Email del Admin:</strong>
+                                    <p className="neon-text">
+                                        <i className="bi bi-envelope-at"></i> 
+                                        <strong> Email del Admin:</strong>
                                         <br />    
                                         <input
                                             type="text"
@@ -107,7 +104,7 @@ function Contact() {
                 {!showWelcome && (
                     <div className="contact-button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className="contact-btn  contact-redirect-button" onClick={handleButtonClick}>
+                        <div className="contact-btn contact-redirect-button neon-button" onClick={handleButtonClick}>
                             <span>&lt;</span>
                         </div>
                     </div>
