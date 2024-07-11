@@ -5,14 +5,13 @@ import backgroundImage from '../images/contact.webp';
 import useParallax from '../animation/screenAnimation';
 import AudioPlayer from '../audio/audioPlayer';
 import Audio from '../audio/contact.mp3';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 function Contact() {
     const [showWelcome, setShowWelcome] = useState(true);
     const [isTextVisible, setTextVisible] = useState(true);
-    const [isTransitioning, setTransitioning] = useState(false);
+    const [isNavigating, setNavigating] = useState(false); // Nuevo estado para la navegación
     const { handleMouseMove } = useParallax();
     const navigate = useNavigate();
     const inputRef = useRef(null);
@@ -29,11 +28,11 @@ function Contact() {
 
     const handleButtonClick = (event) => {
         event.preventDefault();
-        setTransitioning(true);
+        setNavigating(true); // Establecer estado de navegación en verdadero
 
         setTimeout(() => {
             navigate('/');
-        }, 2000);
+        }, 1000);
     };
 
     const copyToClipboard = () => {
@@ -47,15 +46,15 @@ function Contact() {
 
     const handleBottomButtonClick = (event) => {
         event.preventDefault();
-        setTransitioning(true);
+        setNavigating(true); // Establecer estado de navegación en verdadero
 
         setTimeout(() => {
             navigate('/option1');
-        }, 2000);
+        }, 1000);
     };
 
     return (
-        <div className={`contact-principal-content ${isTransitioning ? 'fade-out' : ''}`} onMouseMove={handleMouseMove}>
+        <div className={`contact-principal-content ${isNavigating ? 'fade-out' : ''}`} onMouseMove={window.innerWidth > 768 ? handleMouseMove : null}>
             <div className="contact-image-container">
                 <img src={backgroundImage} alt="Home Background" className="contact-background-image" />
                 {showWelcome && (
@@ -115,3 +114,4 @@ function Contact() {
 }
 
 export default Contact;
+

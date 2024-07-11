@@ -18,11 +18,12 @@ function Option1() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        setTimeout(() => {
-            setShowWelcome(false);
-        }, 1000);
-    }, []);
-
+        if (!isTransitioning) {
+            setTimeout(() => {
+                setShowWelcome(false);
+            }, 1000); // Puedes ajustar el tiempo según sea necesario
+        }
+    }, [isTransitioning]);
     const toggleTextVisibility = () => {
         setTextVisible(!isTextVisible);
     };
@@ -33,7 +34,7 @@ function Option1() {
 
         setTimeout(() => {
             navigate('/');
-        }, 2000);
+        }, 1000);
     };
 
     const handleBottomButtonClick = (event) => {
@@ -42,7 +43,7 @@ function Option1() {
 
         setTimeout(() => {
             navigate('/option2');
-        }, 2000);
+        }, 1000);
     };
 
     const handleDiscordInviteClick = () => {

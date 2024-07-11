@@ -14,11 +14,21 @@
   align-items: center;
   transition: opacity 2s ease-in-out;
 }
-
-.principal-content.fade-out {
-  opacity: 0;
+.principal-content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 2s;
 }
 
+.principal-content.fade-out {
+  background-color: #000;
+}
 /* Image Container */
 .image-container {
   position: relative;
@@ -212,7 +222,7 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +230,7 @@
 }
 
 .contact-principal-content.fade-out {
-  opacity: 0;
+  background-color: #000;
 }
 
 /* Contact Image Container */
@@ -392,11 +402,11 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 2s ease-in-out;
+  transition: background-color 2s;
 }
 
 .option1-overlay-content h1 {
@@ -405,10 +415,10 @@
   font-size: 60px;
 }
 
-.option1-principal-content.fade-out {
-  opacity: 0;
-}
 
+.option1-principal-content.fade-out {
+  background-color: #000;
+}
 /* Image Container */
 .option1-image-container {
   position: relative;
@@ -587,23 +597,21 @@
 
 /* OPTION2 */
 
-/* Principal Content */
 .option2-principal-content {
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #000;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity 2s ease-in-out;
+  transition: background-color 2s;
 }
 
 .option2-principal-content.fade-out {
-  opacity: 0;
+  background-color: #000;
 }
-
 /* Image Container */
 .option2-image-container {
   position: relative;
