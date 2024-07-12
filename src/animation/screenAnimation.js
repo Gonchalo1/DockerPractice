@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+
 
 const useParallax = () => {
   const handleMouseMove = (e) => {

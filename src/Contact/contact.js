@@ -44,15 +44,6 @@ function Contact() {
         }
     };
 
-    const handleBottomButtonClick = (event) => {
-        event.preventDefault();
-        setNavigating(true); // Establecer estado de navegación en verdadero
-
-        setTimeout(() => {
-            navigate('/option1');
-        }, 1000);
-    };
-
     return (
         <div className={`contact-principal-content ${isNavigating ? 'fade-out' : ''}`} onMouseMove={window.innerWidth > 768 ? handleMouseMove : null}>
             <div className="contact-image-container">
@@ -104,7 +95,7 @@ function Contact() {
                     <div className="contact-button-container">
                         <AudioPlayer audioSrc={Audio} />
                         <div className="contact-btn contact-redirect-button neon-button" onClick={handleButtonClick}>
-                            <span>&lt;</span>
+                            <span><i class="bi bi-arrow-left-short"/></span>
                         </div>
                     </div>
                 )}

@@ -24,7 +24,7 @@ const AudioPlayer = ({ audioSrc }) => {
                 Tu navegador no soporta la etiqueta de audio.
             </audio>
             <button className="btn btn-light audio-button" onClick={toggleAudio}>
-                {audioPlaying ? 'Pause Audio' : 'PLAY AUDIO'}
+                {audioPlaying ? <i className="bi bi-music-note-beamed"></i> : <i className="bi bi-music-note-beamed"></i>}
             </button>
         </div>
     );

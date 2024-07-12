@@ -74,11 +74,11 @@ function Home() {
                 {!showWelcome && (
                     <div className="button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className="btn btn-light redirect-button neon-button" onClick={handleButtonClick}>
-                            <span>&gt;</span>
+                        <div className=" redirect-button neon-button" onClick={handleButtonClick}>
+                            <span><i class="bi bi-arrow-right"/></span>
                         </div>
-                        <div className="btn btn-light redirect-button-bottom neon-button" onClick={handleBottomButtonClick}>
-                            <span>&#8964;</span>
+                        <div className="redirect-button-bottom neon-button" onClick={handleBottomButtonClick}>
+                            <span><i class="bi bi-arrow-down"/></span>
                         </div>
                     </div>
                 )}

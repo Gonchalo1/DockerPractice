@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import '../App.css';
 import backgroundImage from '../images/1option.webp';
 import useParallax from '../animation/screenAnimation';
@@ -69,14 +69,14 @@ function Option1() {
                 {!showWelcome && (
                     <div className="option1-overlay-content">
                         <div className="option1-texto-container-home">
-                            <h1 className={neonEffect ? 'neon-text' : ''}>RedlineRp</h1>
-                            <h2 className={neonEffect ? 'neon-text' : ''}>RP LIFE</h2>
+                            <h1 className={`${neonEffect ? 'neon-text' : ''} hide-on-mobile`}>RedlineRp</h1>
+                            <h1 className={neonEffect ? 'neon-text' : ''}>RP LIFE</h1>
                             <h4 className={neonEffect ? 'neon-text' : ''}>
                                 En el servidor Rplife orientado en Argentina, puedes ser lo que quieras.
                                 También puedes comprar roles privados o VIPs para mejorar tu experiencia de juego.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
-                            <button className={`option1-btn btn btn-light text-button ${neonEffect ? 'neon-button' : ''}`} onClick={toggleTextVisibility}>
+                            <button className={`option1-btn  text-button ${neonEffect ? 'neon-button' : ''}`} onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
@@ -88,7 +88,7 @@ function Option1() {
                                         <h3>VIP HADES</h3>
                                     </button>
                                     <br/>
-                                    <span>
+                                    <span className='hide-on-mobile'>
                                         MENSUAL 5 USD/------------- MENSUAL 10USD<br/> 
                                         TRIMESTRAL 10 USD/--------- TRIMESTRAL 12USD<br/>
                                         PERMANENTE 12 USD/-------- PERMANENTE 16USD
@@ -101,11 +101,11 @@ function Option1() {
                 {!showWelcome && (
                     <div className="option1-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
-                        <div className={`option1-btn btn btn-light option1-redirect-button-top ${neonEffect ? 'neon-button' : ''}`} onClick={handleTopButtonClick}>
-                            <span>&#8963; </span> {/* Arrow up symbol */}
+                        <div className={`option1-btn  option1-redirect-button-top ${neonEffect ? 'neon-button' : ''}`} onClick={handleTopButtonClick}>
+                        <i class="bi bi-arrow-up"/>
                         </div>
-                        <div className={`option1-btn btn btn-light option1-redirect-button-bottom ${neonEffect ? 'neon-button' : ''}`} onClick={handleBottomButtonClick}>
-                            <span>&#8964; </span> {/* Arrow down symbol */}
+                        <div className={`option1-btn  option1-redirect-button-bottom ${neonEffect ? 'neon-button' : ''}`} onClick={handleBottomButtonClick}>
+                          <span><i class="bi bi-arrow-down"/></span>
                         </div>
                     </div>
                 )}

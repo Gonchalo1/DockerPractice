@@ -47,11 +47,6 @@ function Option2() {
         }, 1000);
     };
 
-    const handleTopButtonClick = (event) => {
-        event.preventDefault();
-        // Handle top button click functionality here
-        console.log('Top button clicked');
-    };
 
     const handleNeonEffect = () => {
         setNeonEffect(true); // Activa el efecto neón
@@ -69,13 +64,13 @@ function Option2() {
                 {!showWelcome && (
                     <div className="option2-overlay-content">
                         <div className="option2-texto-container-home">
-                            <h1 className={neonEffect ? 'neon-text' : ''}>RedlineRp </h1>
-                            <h2 className={neonEffect ? 'neon-text' : ''}>RP MILITARY </h2>
+                            <h1 className={`${neonEffect ? 'neon-text' : ''} hide-on-mobile`}>RedlineRp</h1>
+                            <h1 className={neonEffect ? 'neon-text' : ''}>RP MILITARY </h1>
                             <h4 className={neonEffect ? 'neon-text' : ''}>
                                 En el Rpmilitar podrás luchar en el bando Ruso o Ucraniano por el poder del país. Puedes ser ingeniero, piloto, sniper, etc. En este modo puedes comprar facciones privadas/personalizadas.
                             </h4>
                             <span><strong>Detalles</strong></span><br/>
-                            <button className={`option2-btn btn btn-light text-button ${neonEffect ? 'neon-button' : ''}`} onClick={toggleTextVisibility}>
+                            <button className={`option2-btn text-button ${neonEffect ? 'neon-button' : ''}`} onClick={toggleTextVisibility}>
                                 {isTextVisible ? <FontAwesomeIcon icon={faAngleDown} /> : <FontAwesomeIcon icon={faAngleRight} />}
                             </button>
                             {isTextVisible && (
@@ -92,8 +87,8 @@ function Option2() {
                     <div className="option2-button-container button-container">
                         <AudioPlayer audioSrc={Audio} />
                         
-                        <div className={`option2-btn btn btn-light redirect-button-bottom ${neonEffect ? 'neon-button' : ''}`} onClick={handleBottomButtonClick}>
-                            <span>&#8963; </span> 
+                        <div className={`option2-btn redirect-button-bottom ${neonEffect ? 'neon-button' : ''}`} onClick={handleBottomButtonClick}>
+                        <i class="bi bi-arrow-up"/>
                         </div>
                     </div>
                 )}
