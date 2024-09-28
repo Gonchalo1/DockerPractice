@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                  // Versión de ECMAScript
+    "module": "commonjs",              // Sistema de módulos a utilizar
+    "strict": true,                    // Habilita verificaciones estrictas
+    "esModuleInterop": true,           // Mejora la interoperabilidad con módulos de ES
+    "outDir": "./dist",                // Directorio de salida de los archivos compilados
+    "rootDir": "./src",                // Directorio raíz de los archivos fuente
+    "skipLibCheck": true,              // Omite la verificación de tipos en archivos de definición
+    "forceConsistentCasingInFileNames": true, // Asegura nombres de archivo consistentes
+    "jsx": "react"                     // Define cómo se transpila el JSX
+  },
+  "include": ["src/**/*"],             // Archivos a incluir en la compilación
+  "exclude": ["node_modules", "dist"]  // Archivos a excluir
+}

@@ -1,7 +1,8 @@
-
+import { MouseEventHandler } from 'react';
 
 const useParallax = () => {
-  const handleMouseMove = (e) => {
+  // Define el manejador de eventos del ratón
+  const handleMouseMove: MouseEventHandler<HTMLElement> = (e) => {
     if (window.innerWidth > 768) {
       const { clientX, clientY, currentTarget } = e;
       const rect = currentTarget.getBoundingClientRect();
